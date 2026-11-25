@@ -22,7 +22,7 @@ GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 
 if not GEMINI_API_KEY:
     st.error("❌ Gemini API key not found. Please create a .env file with GEMINI_API_KEY.")
-else:
+else:ssss
     try:
         genai.configure(api_key=GEMINI_API_KEY)
         st.success("✅ Gemini API configured successfully!")
@@ -64,7 +64,7 @@ def retrieve_top_chunks(question, chunks, index, model, top_k=3):
     D, I = index.search(np.array(q_emb), top_k)
     return [chunks[i] for i in I[0]]
 
-def ask_gemini(prompt, model_name="gemini-2.0-flash"):
+def ask_gemini(prompt, model_name="gemini-3.8-flash"):
     try:
         model = genai.GenerativeModel(model_name)
         response = model.generate_content(prompt)
