@@ -1,0 +1,10 @@
+streamlit
+PyPDF2
+pdfplumber
+faiss-cpu
+sentence-transformers
+google-generativeai
+python-dotenv
+numpy
+pandas
+scikit-learn
