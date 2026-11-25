@@ -64,7 +64,7 @@ def retrieve_top_chunks(question, chunks, index, model, top_k=3):
     D, I = index.search(np.array(q_emb), top_k)
     return [chunks[i] for i in I[0]]
 
-def ask_gemini(prompt, model_name="gemini-3.8-flash"):
+def ask_gemini(prompt, model_name="gemini-3.5-flash-lite"):
     try:
         model = genai.GenerativeModel(model_name)
         response = model.generate_content(prompt)
