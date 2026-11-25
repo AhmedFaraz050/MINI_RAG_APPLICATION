@@ -22,7 +22,7 @@ GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 
 if not GEMINI_API_KEY:
     st.error("❌ Gemini API key not found. Please create a .env file with GEMINI_API_KEY.")
-else:ssss
+else:
     try:
         genai.configure(api_key=GEMINI_API_KEY)
         st.success("✅ Gemini API configured successfully!")
